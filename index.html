@@ -3,20 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MLT Software</title>
+    <title>Nexus // A Writer's Studio</title>
     <style>
-        body { font-family: sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.6; }
-        h1 { color: #111; }
-        .license { background: #f4f4f4; padding: 15px; border-left: 4px solid #0076ff; margin-top: 30px; font-size: 0.9em; }
+        :root {
+            --bg-color: #0f1115;
+            --card-bg: #161920;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            --border: #232834;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px 20px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .logo-mark {
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .main-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .features-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            color: var(--text-muted);
+        }
+
+        .features-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: auto;
+            border-top: 1px solid var(--border);
+            padding-top: 30px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .license-box {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 25px;
+            border-left: 3px solid var(--accent);
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .main-card { padding: 25px; }
+        }
     </style>
 </head>
 <body>
-    <h1>MLT Applications</h1>
-    <p>Custom desktop utilities and narrative tools built using Electron and local AI frameworks.</p>
-    
-    <div class="license">
-        <p><strong>Licensing Notice:</strong> Scripture quotations marked BSB are from the Holy Bible, Berean Standard Bible, BSB. Copyright ©2016, 2024 by Bible Hub. Used by Permission. All Rights Reserved Worldwide.</p>
-        <p>For more information, visit the official homepage at <a href="https://berean.bible" target="_blank">berean.bible</a>.</p>
+
+    <div class="container">
+        <header>
+            <div class="logo-mark">MLT Desktop Suite</div>
+            <h1>Nexus</h1>
+            <p class="subtitle">A minimalist, distraction-free environment engineered for deep narrative development and structural design.</p>
+        </header>
+
+        <main>
+            <div class="main-card">
+                <h2>Product Overview</h2>
+                <p>Nexus is a high-performance desktop studio built on modern web technologies and optimized architecture. Seamlessly transitioning complex creative workflows, it provides tools for deep text organization, narrative outlines, and comprehensive manuscript management without cloud dependence.</p>
+                
+                <ul class="features-list">
+                    <li>Distraction-free markdown and writing interface</li>
+                    <li>Integrated localized architecture with offline capabilities</li>
+                    <li>Advanced multi-tier textual reference systems</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 MLT Software. Built using Electron and local AI frameworks.</p>
+            
+            <div class="license-box">
+                <strong>Licensing & Text Attributions:</strong><br>
+                Scripture quotations marked BSB are from the Holy Bible, Berean Standard Bible, BSB. This text of God's Word has been dedicated to the public domain. Used by permission. All rights reserved worldwide. <br><br>
+                For more details regarding text access and verification tables, please visit the official project headquarters at 
+                <a href="https://berean.bible" target="_blank">berean.bible</a>.
+            </div>
+        </footer>
     </div>
+
 </body>
 </html>
